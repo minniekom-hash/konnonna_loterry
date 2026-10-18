@@ -318,8 +318,18 @@ def internal_error(error):
     return "เกิดข้อผิดพลาดภายในระบบ กรุณาลองใหม่อีกครั้งในภายหลัง", 500
 
 # Initialize Database and Scheduler on startup
-init_db()
-start_scheduler()
+try:
+    init_db()
+except Exception as e:
+    logger.error(f"Database init error: {e}")
+
+# Only start scheduler in main process (avoid duplicate with gunicorn workers)
+import os
+if os.environ.get('WERKZEUG_RUN_MAIN') == 'true' or not os.environ.get('GUNICORN_ARBITER'):
+    try:
+        start_scheduler()
+    except Exception as e:
+        logger.error(f"Scheduler init error: {e}")
 
 if __name__ == '__main__':
     # Start local server on port 5000
