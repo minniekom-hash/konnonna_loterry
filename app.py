@@ -26,7 +26,7 @@ from scheduler import start_scheduler
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 app.config.from_object(Config)
 
 # Make CSRF token & settings available to all templates
