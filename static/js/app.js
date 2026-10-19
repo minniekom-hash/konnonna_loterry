@@ -102,7 +102,7 @@ async function checkSingleTicket() {
 
                         <!-- ข้อความแจ้งเตือนคนถูกรางวัลตามที่ระบุ เป็นตัวหนังสือสีเขียว -->
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-emerald-400 tracking-tight font-heading my-2">
-                            มึง!!! ถูกรางวัลได้ยังไงวะอีห่า
+                            โอ้ว! คือหมานแท้น้อหัวหน้า
                         </h2>
                         
                         <p class="text-zinc-400 text-xs sm:text-sm mt-1">
@@ -146,7 +146,7 @@ async function checkSingleTicket() {
 
                     <!-- ข้อความแจ้งเตือนคนไม่ถูกรางวัลตามที่ระบุ เป็นตัวหนังสือสีแดง -->
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-rose-500 tracking-tight font-heading my-2">
-                        ว้าย!!!ถูกหวยแดกสมน้ำหน้าอีคนบาป
+                        ห่าแดกดากมึงเอ้ยเลขฮูขี่
                     </h2>
 
                     <p class="text-zinc-400 text-xs sm:text-sm mt-2">
@@ -244,7 +244,7 @@ async function checkBulkTickets() {
                     </div>
                     <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-emerald-950/80 text-emerald-400 border border-emerald-800/80 rounded-full mb-2">ยินดีด้วย</span>
                     <h3 class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-heading">
-                        มึง!!! ถูกรางวัลได้ยังไงวะอีห่า
+                        โอ้ว! คือหมานแท้น้อหัวหน้า
                     </h3>
                     <p class="text-xs text-emerald-300/80 mt-1">พบสลากที่ถูกรางวัลทั้งหมด ${data.total_winning_tickets} ใบ รวมเป็นเงิน ${formatCurrency(data.total_reward_sum)}</p>
                 </div>
@@ -258,7 +258,7 @@ async function checkBulkTickets() {
                     </div>
                     <span class="inline-block text-xs font-semibold px-2.5 py-1 bg-rose-950/80 text-rose-400 border border-rose-800/80 rounded-full mb-2">เสียใจด้วย</span>
                     <h3 class="text-2xl sm:text-3xl font-extrabold text-rose-500 font-heading">
-                        ว้าย!!!ถูกหวยแดกสมน้ำหน้าอีคนบาป
+                        ห่าแดกดากมึงเอ้ยเลขฮูขี่
                     </h3>
                     <p class="text-xs text-rose-300/80 mt-1">สลากที่คุณตรวจทั้งหมด ${data.total_checked} ใบ ไม่มีใบไหนถูกรางวัลเลย</p>
                 </div>
