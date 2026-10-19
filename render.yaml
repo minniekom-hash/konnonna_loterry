@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: niyom-thai-lottery
+    name: konnonna-lottery
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
@@ -10,3 +10,7 @@ services:
         generateValue: true
       - key: PYTHON_VERSION
         value: "3.11.0"
+      - key: FLASK_APP
+        value: "app.py"
+      - key: FLASK_ENV
+        value: "production"
